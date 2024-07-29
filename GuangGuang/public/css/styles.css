@@ -1,0 +1,56 @@
+/* Existing styles */
+/* Add the following */
+
+.logo {
+  font-family: 'YourDesiredFontFamily', sans-serif; /* Replace with the actual font family */
+  font-size: 36px; /* Adjust size as necessary */
+  font-weight: bold; /* Adjust weight as necessary */
+  text-transform: uppercase; /* To ensure the text is all uppercase */
+  color: #000000; /* Adjust color if necessary */
+  letter-spacing: 1px; /* Adjust spacing to match */
+}
+
+.navbar {
+  background-color: transparent; /* Remove the black background */
+  border-bottom: 1px solid #e5e5e5; /* Add border bottom for the horizontal line */
+}
+
+.navbar-brand {
+  text-align: center;
+}
+
+.navbar-nav {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.nav-item.dropdown {
+  margin-top: 10px; /* Adjust the margin as necessary */
+}
+
+/* New styles for fixed-size-img and fixed-size-card */
+.fixed-size-img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  max-height: 300px; /* Adjust as needed */
+  object-fit: cover; /* Ensure the image covers the specified dimensions */
+}
+
+.fixed-size-card {
+  height: 100%; /* Make sure all cards have the same height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Ensure the card body fills the entire height */
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card-body {
+  flex-grow: 1; /* Grow to fill the remaining space */
+}

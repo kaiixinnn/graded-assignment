@@ -1,0 +1,90 @@
+<!-- addFurniture.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniture - Guang Guang App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm navbar-light border-bottom">
+        <div class="container-fluid text-center">
+            <a class="navbar-brand mx-auto logo" href="/">Guang Guang App</a>
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-sm navbar-light border-bottom">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Products <i class="fas fa-shopping-bag"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="/Product">Product page</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownClothes" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Clothes <i class="fas fa-tshirt"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownClothes">
+                            <li><a class="dropdown-item" href="/Clothes">Clothes page</a></li>
+                            <li><a class="dropdown-item" href="/addClothes">Add New Clothes</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownFurniture" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Furniture <i class="fas fa-bed"></i>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownFurniture">
+                            <li><a class="dropdown-item" href="/Furnitures">Furniture page</a></li>
+                            <li><a class="dropdown-item" href="/addFurniture">Add New Furniture</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <br>
+        <div class="text-center"><h2>Add New Furniture</h2></div>
+        <br>
+        <div class="text-center">
+            <form action="/addFurniture" method="POST">
+                <label for="name">Furniture Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="quantity">Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="0" step="1" required><br><br>
+
+                <label for="price">Price:</label><br>
+                <input type="number" id="price" name="price" min="0" step="0.01" required><br><br>
+
+                <label for="image">Image:</label><br>
+                <input type="text" id="image" name="image" required><br><br>
+
+                <label for="material">Material:</label><br>
+                <input type="text" id="material" name="material"><br><br>
+
+                <button type="submit">Add Furniture</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Redirect to /furnitures after successfully adding furniture
+        if (window.location.href.includes('addFurniture') && window.location.search.includes('status=success')) {
+            window.location.replace('/furnitures');
+        }
+    </script>
+</body>
+</html>
