@@ -6,10 +6,15 @@ const app = express();
 
 // Create MySQL connection
 const connection = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '', // Replace with your MySQL password
-    database: 'guangguang'
+    // host: 'localhost',
+    // user: 'root',
+    // password: '', // Replace with your MySQL password
+    // database: 'guangguang'
+    host: 'sql.freedb.tech',
+    user: 'freedb_Faith',
+    password: 'zmeCKB@ry7H*eZE', // Replace with your MySQL password
+    database: 'freedb_GuangGuang'
+
 });
 
 connection.connect((err) => {
