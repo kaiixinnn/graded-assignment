@@ -10,10 +10,10 @@ const connection = mysql.createConnection({
     // user: 'root',
     // password: '', // Replace with your MySQL password
     // database: 'guangguang'
-    host: 'sql.freedb.tech',
-    user: 'freedb_Faith',
-    password: 'zmeCKB@ry7H*eZE', // Replace with your MySQL password
-    database: 'freedb_GuangGuang'
+    host: 'pro.freedb.tech',
+    user: 'dbuserone',
+    password: 'wd5!!bGvy7Xr!dh', // Replace with your MySQL password
+    database: 'premiumdatabase'
 
 });
 
